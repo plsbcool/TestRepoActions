@@ -50,6 +50,10 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           files: report.xml
           
+      - name: List out my directory
+        run: |
+          ls
+          
         
           
           
