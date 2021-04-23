@@ -32,8 +32,8 @@ jobs:
       - if: ${{success()}}
         name: Test Goblin
         run: |
-          go test -v
-          go test -v | go2xunit >report.xml
+          go test -v -cover
+          go test -v -cover | go2xunit >report.xml
           ls
       - if: ${{failure()}}
         name: Create Issues
