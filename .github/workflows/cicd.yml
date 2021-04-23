@@ -20,6 +20,7 @@ jobs:
       - name: Check Go Version
         run: |
           go version
+          ls
         
       - name: Install dependencies
         run: |
@@ -33,6 +34,7 @@ jobs:
         run: |
           go test -v
           go test -v | go2xunit >report.xml
+          ls
       - if: ${{failure()}}
         name: Create Issues
         uses: nashmaniac/create-issue-action@v1.1
